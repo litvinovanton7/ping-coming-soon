@@ -21,13 +21,6 @@ function validateEmail(email) {
 }
 
 function updateInput() {
-    // if (validateEmail(headerInput.value)) {
-    //     headerInput.style.borderColor = "border: 1px solid green;";
-    // } else {
-    //     headerInput.style.borderColor = "border: 1px solid #FF5466;";
-    //     textError.classList.add("error");
-    // }
-
     while (validateEmail(headerInput.value) != true) {
         headerInput.style.borderColor = "border: 1px solid green;";
         
@@ -38,5 +31,5 @@ function updateInput() {
         }
     }
 }
-    
+
 console.log(textError.className);
