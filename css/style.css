@@ -61,6 +61,20 @@
     font-weight: 300;
 }
 
+.input[type="email"] {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #B8C7ED;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.input:focus {
+    border-radius: 28px;
+    border: 1px solid #FF5466;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.00);
+}
+
 .header__btn {
     font-family: 'Libre Franklin', sans-serif;
     width: 200px;
@@ -101,3 +115,21 @@
     color: hsl(228, 45%, 44%);
 }
 
+.text__error {
+    display: none;
+}
+
+.error {
+    display: block;
+}
+
+@container (max-width: 375px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: center;
+    }
+}
