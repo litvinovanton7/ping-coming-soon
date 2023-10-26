@@ -14,22 +14,21 @@ headerInput.addEventListener("blur", e => {
     headerInput.placeholder = headerInputPlaceholder;
 });
 
-headerInput.addEventListener("input", updateInput);
+headerBtn.addEventListener("click", updateInput);
 
 function validateEmail(email) {
     return EMAIL_REGEXP.test(email);
 }
 
 function updateInput() {
-    while (validateEmail(headerInput.value) != true) {
-        headerInput.style.borderColor = "border: 1px solid green;";
-        
-        if (validateEmail(headerInput.value)) {
-            headerInput.style.borderColor = "border: 1px solid #FF5466;";
-            textError.classList.add("error");
-            break;
-        }
+    if (validateEmail(headerInput.value) != true) {
+        headerInput.style.border = "1px solid #FF5466;";
+        textError.classList.add("error");
+
+        headerForm.addEventListener("submit", e => {
+            e.preventDefault();
+        });
+    } else if (validateEmail(headerInput.value) || headerInput.value === "") {
+        textError.classList.remove("error");
     }
 }
-
-console.log(textError.className);
