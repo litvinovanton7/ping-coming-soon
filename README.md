@@ -4,4 +4,3 @@
  - Working with input and button
  - DOM manipulation
  - events in JavaScript 
- - 

@@ -122,13 +122,9 @@ button {
 
 
 
-@container (max-width: 375px) {
-    .container {
-        max-width: 320px;
-    }
+@media (max-width: 375px) {
 
-    .header__top {
-        display: flex;
-        justify-content: center;
+    .header__title {
+        font-size: 30px;
     }
 }
