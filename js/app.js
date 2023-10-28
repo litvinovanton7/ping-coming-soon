@@ -6,11 +6,11 @@ const headerInputPlaceholder = headerInput.placeholder;
 const textError = document.querySelector(".text__error");
 const headerBtn = document.querySelector(".header__btn");
 
-headerInput.addEventListener("focus", e => {
+headerInput.addEventListener("focus", () => {
     headerInput.placeholder = " ";
 });
 
-headerInput.addEventListener("blur", e => {
+headerInput.addEventListener("blur", () => {
     headerInput.placeholder = headerInputPlaceholder;
 });
 
@@ -21,7 +21,7 @@ function validateEmail(email) {
 }
 
 function updateInput() {
-    if (validateEmail(headerInput.value) != true) {
+    if (validateEmail(headerInput.value) !== true) {
         headerInput.style.border = "1px solid #FF5466;";
         textError.classList.add("error");
 
