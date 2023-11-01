@@ -30,5 +30,6 @@ function updateInput() {
         });
     } else if (validateEmail(headerInput.value) || headerInput.value === "") {
         textError.classList.remove("error");
+        console.log("Hi");
     }
 }
